@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+<title>User Dashboard</title>
+<link rel="stylesheet" type="text/css" href="Addusrstyle.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+<script src="addusr.js"></script>
+
+<link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet"type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+
+<body>
+<!--Wrapper Start-->
+<div class="wrapper">
+
+    <!--Header Menu Start-->
+    <div class="header">
+    <div class="header-menu"> 
+    <div class="title"> User <span> Dashboard </span> </div> 
+    <div class="sidebar-btn">
+    <i class="fa fa-bars"></i>    
+    </div>   
+    <ul>
+        <li> <a href="#"><i class="fa fa-user" aria-hidden="true"></i><span class ="User Profile">  </span></a></li>
+        <li> <a href="#"><i class="fa fa-bell" aria-hidden="true"></i><span class ="Notifications ">  </span></a>
+        <li> <a href="Login.html"><i class="fa fa-power-off" aria-hidden="true"></i><span class= "Logout"> </span></a>  
+    </ul>
+    </div>   
+    </div>
+    <!--Header Menu End-->
+
+    <!--Sidebar Start-->
+    <div class="sidebar">
+    <div class="sidebar-menu">
+    <center class="profile">
+    <img src="User.jpg" alt="" >
+    <p> Andrew Smith </p>   
+    </center>
+    
+<li class="item" id="userhome">
+<a href="Index.html" class="menu-btn">
+<i class="fa fa-home"></i> <span class="Dashboard"> Dashboard </span>
+</a>
+</li>    
+    
+<li class="item" id="user">
+<a href="#addusr" class="menu-btn">
+<i class="fa fa-user-plus"></i> <span class="Enroll User"> Enroll User </span>
+</a>         
+</li>
+
+<li class="item" id="books">
+<a href="#books" class="menu-btn">
+<i class="fa fa-book"></i> <span class="Books"> Books </span><i class="fas fa-chevron-down drop-down"></i></span>
+</a>  
+<div class="sub-menu">
+    <a href="#Issuebooks"><i class="fa fa-wpforms"></i><span class="Issue Books">Issue Books</span></a>
+    <a href="#Returnsbooks"><i class="fa fa-retweet"></i><span class="Return Books">Return Books</span></a>
+</div>       
+</li>
+
+<li class="item" id="Settings">
+    <a href="#Settings" class="menu-btn">
+    <i class="fa fa-wrench"></i><span class="Settings"> Settings <i class="fas fa-chevron-down drop-down"></i></span>
+    </a>
+    <div class="sub-menu">
+        <a href="#Profilesetting"><i class="fa fa-user"></i><span class="Profile Settings">Profile Settings</span></a>
+        <a href="#dance logAtten"><i class="fa fa-history"></i><span class="Attendance log">Attendance log</span></a>
+    </div>
+    </li> 
+
+    <li class="item">
+    <a href="#about" class="menu-btn">
+    <i class="fa fa-info-circle"></i><span class="About"> About </span>
+    </a>         
+    </li>    
+
+</div>
+</div>
+<!--Sidebar End-->
+ <!--main container start-->
+ <div class="main-container">
+    <form id="table">
+        <center>
+            <fieldset>
+                <legend>Enroll User Information</legend>
+            <div>
+                <label for="Student Name">Student Name</label>
+                <input type="text" name="stunametxt" id="nametxt" value="" tabindex="1" />
+            </div>
+    
+            <div>
+                <label for="Student Address">Student Address</label>
+                <textarea cols="40" rowa="8" name="stunaddresstxt" id="addresstxt" ></textarea>
+            </div>
+
+            <div>
+                <label for="Identification document">Choose any Document:</label>
+
+                <select id="enroll_usr" onchange="ShowHideDiv()">
+                  <option value="N">Select any Document</option>  
+                  <option value="Y" id="stuid">Student ID</option>
+                  <option value="Y" id="driveid">Driving License</option>
+                  <option value="Y" id="aadhar">Aadhar Card</option>
+                  <option value="Y" id="pssprt">Passport</option>
+                  <option value="Y" id="othrdoc">Other Document</option>
+                  <input type="text" id="docsnametxt" value="Enter Valid value" style="display: none" />
+                </select>
+                
+                
+                
+                <br><label> GENDER </label><tr></td><input type="radio" name="gender" value="Male" /> Male <input    
+                    type="radio" name="gender" value="Female"> Female </td></tr>
+                    <br><label for="start">Date of Birth:</label>
+                    <input id="txtdate" type="text">
+                    
+                    <br>
+                    <label for="Identification document">Choose Membership</label>
+                    <select id="enroll_usr">
+                      <option value="">Select below Membership</option>  
+                      <option value="platinum">Platinum</option>
+                      <option value="gold">Golden</option>
+                      <option value="silver">Silver</option>
+                      <option value="bonanza">Bonanza</option>
+                      <option value="normal">Normal</option>
+                    </select>
+                <p></p>
+                </div>
+
+
+        <input type="button" button class="Savebtn" id="savebtn" value="Save" onclick="RedirectSample()"></button>
+        <input type="button" button class="Savebtn" id="savebtn" value="Clear" onclick="Redireclear()"></button>
+        <input type="button" button class="Savebtn" id="savebtn" value="cancel" onclick="Redirectcancel()"></button>
+        </fieldset>        
+        </center>
+    
+    </form>
+ </div>
+ <!--main container End-->
+</div>
+<!--Wrapper End-->
+
+</body>
+</html>

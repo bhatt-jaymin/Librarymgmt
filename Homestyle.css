@@ -1,0 +1,153 @@
+body
+{
+margin: 0;
+padding: 0;
+font-family: 'Roboto',sans-serif;
+width:100%;
+height: 100vh;
+background: url(login_home.jpg) 50% 50% no-repeat;
+background-size: cover;
+display: table;
+}
+header
+{
+  position: fixed;
+  background: #22242A;
+  padding: 20px;
+  width: 100%;
+  height: 30px;
+}
+
+.dashbrd_leftarea h3
+{
+color: #fff;
+margin: 0px;
+text-transform: uppercase;
+font-size: 22px;
+font-weight: 900;
+}
+.dashbrd_leftarea span
+{
+  color: #1DC4E7;
+}
+
+.logout_btn
+{
+padding: 5px;
+background: #1983D3;
+text-decoration: none;
+float: right;
+margin-top: -30px;
+margin-right: 40px;
+border-radius: 2px;
+font-size: 15px;
+font-weight: 600;
+color: #fff;
+transition: 0.5s;
+transition-property: background;
+}
+.logout_btn:hover
+{
+  background: #bd9dbb;
+}
+
+.sidebar_navigation
+{
+background: #2F323A;
+margin-top: 70px;
+padding-top: 30px;
+position: fixed;
+left: 0;
+width: 270px;
+height: 100%;
+transition: 0.5s;
+transition-property:left;
+
+}
+.sidebar_navigation .usricon
+{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+.sidebar_navigation h4
+{
+  color: linen;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.sidebar_navigation a
+{
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property:background;
+  padding-bottom: 3px;
+}
+.sidebar_navigation a:hover
+{
+  background: #1983D3;
+}
+.sidebar_navigation i
+{
+  padding-right: 10px;
+}
+
+label #sidbar_btn
+{
+z-index: 1;
+color: #fff;
+position: fixed;
+cursor: pointer;
+left: 300px;
+font-size: 20px;
+margin: 5px 0;
+transition: 0.5s;
+transition-property:background-color;
+}
+
+label #sidbar_btn :hover
+{
+  background-color: blueviolet;
+}
+#chkbox:checked ~ .sidebar_navigation
+{
+left: -190px;
+}
+
+#chkbox:checked ~ .sidebar_navigation a span
+{
+display: none;
+}
+
+#chkbox:checked ~ .sidebar_navigation a 
+{
+font-size: 20px;
+margin-left: 170px;
+width: 100px;
+}
+.content
+{
+margin-left: 250px;
+background: url(login_home.jpg) no-repeat;
+background-position: center;
+background-size: cover;
+height: 100vh;
+transition: 0.5s;
+
+}
+#chkbox:checked ~.content
+{
+  margin-left: 60px;
+}
+
+#chkbox
+{
+  display: none;
+}
