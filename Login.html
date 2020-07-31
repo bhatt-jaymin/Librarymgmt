@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Login Page</title> 
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+    
+<div class="Login">
+<form>
+    <h2>Login Form</h2>
+    <input type="text" class="text" placeholder="Enter User Name" >
+    <input type="password" class="text" placeholder="Enter Password">
+    <input type="button" button class="loginbtn" id="homebtn" value="Sign In" onclick="RedirectSample()"></button>
+
+    <br><br><a href="fgtpwd.html" class="frgtpwd">Forget Password ?</a>
+    <br><br>
+    <script type="text/javascript">
+    function RedirectSample() 
+    {
+    var url = '/index.html';
+    window.location.href = url;
+    }    
+</script>
+</form>
+</div>
+<div>
+ 
+    <ul>
+        <li><a href="#"><i class="fa fa-facebook" area-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" area-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus" area-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin" area-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" area-hidden="true"></i></a></li>
+    </ul>
+   
+</div>
+</body>            
+</html>
